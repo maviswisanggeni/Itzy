@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'TwCenMT';
+    src: url('../fonts/TwCenMTStd.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'TwCenMT';
+}
+
+body {
+    background-color: #fff;
+    animation: fade_in .5s linear forwards;
+    opacity: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    padding: 0 50px;
+}
+
+.header span {
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    margin: 50px auto;
+    background-color: #000;
+}
+
+.header .logo-name {
+    float: left;
+    width: 225px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header .logo-name h2 {
+    font-size: 35px;
+    
+    /* transform: rotateY(180deg); */
+}
+
+.header .logo-name h2 a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header .header-list {
+    float: right;
+    width: 215px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header-list ul li {
+    float: left;
+    align-items: center;
+    list-style: none;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.header .header-list ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header #toggle {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+header #toggle:before {
+	content: '';
+	position: absolute;
+    left: 50%;
+	transform: translate(-50%, 100%) rotate(45deg);
+	top: 10px;
+	width: 100%;
+	height: 3px;
+	background: #000;
+}
+
+header #toggle:after {
+	content: '';
+	position: absolute;
+    left: 50%;
+	transform: translate(-50%,-100%) rotate(-45deg);
+	bottom: 10px;
+	width: 100%;
+	height: 3px;
+	background: #000;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.main .countainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.main .countainer .schedule-title {
+    width: 50%;
+    /* background-color: antiquewhite; */
+    padding-left: 100px;
+}
+
+.main .countainer .schedule-main {
+    width: 50%;
+    /* background-color: aquamarine; */
+}
+
+.countainer .schedule-title h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.countainer .schedule-main .year {
+    margin-bottom: 15px;
+    margin-left: 35px;
+}
+
+.countainer .schedule-main .year h4 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.countainer .schedule-main .mounth {
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.countainer .schedule-main .mounth ul li {
+    float: left;
+    list-style: none;
+    text-transform: uppercase;
+    margin-right: 25px;
+    opacity: 0.5;
+}
+
+.countainer .schedule-main .mounth ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.countainer .schedule-main .mounth ul li#active {
+    opacity: 1;
+    border-bottom: 2px solid #000;
+}
+
+.countainer .schedule-main .calender {
+    display: flex;
+    justify-content: center;
+}
+
+/* .countainer .schedule-main table {
+} */
+
+.countainer .schedule-main table tr {
+    text-align: center;
+}
+
+.countainer .schedule-main table td {
+    padding: 20px 30px;
+}
+
+.countainer .schedule-main table #last-mounth {
+    padding-left: 37px;
+}
+
+.countainer .schedule-main table #day td {
+    font-size: 24px;
+}
+
+.countainer .schedule-main table #event span {
+    padding: 15px;
+    background-color: #E7BE3A;
+    border-radius: 100%;
+    color: #fff;
+}
+
+.footer {
+    position: relative;
+    /* margin-top: 150px; */
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.footer .copyright h3 {
+    font-size: 16px;
+    color: #292C4A;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
